@@ -17,9 +17,9 @@ export const uploadOnCloudinary = async (localFilePath) => {
             folder: "YOUTUBE-BACKEND",  // 👈 project folder
             resource_type: "auto"
         });
-
+        console.log("response :", response)
         // file has been uploaded successfully
-        console.log("File is uploaded on cloudinary : ", response.url)
+        console.log("File is uploaded on cloudinary : ", response.secure_url)
 
         // delete file from local storage after upload
         fs.unlinkSync(localFilePath); // it should synchronous work
